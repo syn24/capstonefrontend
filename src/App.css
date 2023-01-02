@@ -1,38 +1,119 @@
-.App {
+body {
+  margin: 3rem 5%;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  padding: 15px;
+  font-family: "Poppins", sans-serif;
+  background-size: cover;
+  background-position: center;
+}
+
+img {
+  width: 100px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+header > img {
+  display: block;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: rgb(16, 67, 73);
+  color: white;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav li {
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+}
+
+article {
+  flex: 1;
+}
+
+footer {
+  display: flex;
+  background-color: rgb(16, 67, 73);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+footer div {
+  flex: 1;
+}
+
+footer div > img {
+  width: 50px;
+}
+
+.main-section {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 3.5rem;
+  color: rgb(16, 67, 73);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.main-promotion {
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-size: cover;
+  background-position: bottom;
   color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.card-list {
+  margin: 20px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-article {
+  max-width: 300px;
+  background-color: rgb(16, 67, 73);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.image-article {
+  width: 250px;
+  height: 170px;
+}
+
+.nav-menu:hover {
+  transform: translateY(-3px);
 }
