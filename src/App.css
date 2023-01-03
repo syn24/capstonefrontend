@@ -3,11 +3,28 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+p {
+  padding: 5px;
+}
+
+span {
+  padding: 0px;
+}
+
 header {
-  padding: 15px;
   font-family: "Poppins", sans-serif;
   background-size: cover;
   background-position: center;
+}
+
+.logo {
+  height: 50px ;
+  width: 200px ;
+  display: flex;
+}
+
+.list-item {
+  margin: 0.5rem 0.5rem;
 }
 
 img {
@@ -18,26 +35,39 @@ h1 {
   font-size: 3rem;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 2rem;
 }
 
-header > img {
-  display: block;
-  margin: 0 auto;
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 1rem;
 }
 
 nav {
   background-color: rgb(16, 67, 73);
   color: white;
-  margin: 5px;
   border-radius: 5px;
+}
+
+ul {
+  padding: 10px;
 }
 
 nav ul {
   list-style: none;
   text-align: center;
-  padding: 10px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -65,16 +95,20 @@ footer {
   display: flex;
   background-color: rgb(16, 67, 73);
   color: white;
-  padding: 20px;
+  padding: 0 20px;
   border-radius: 5px;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+.footer-logo {
+  height: 100px;
+  width: 50px;
+  margin-top: 5px;
 }
 
 footer div {
   flex: 1;
-}
-
-footer div > img {
-  width: 50px;
 }
 
 .main-section {

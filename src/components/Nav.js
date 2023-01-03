@@ -1,11 +1,15 @@
 import React from "react";
-import '../styles/Nav.css'
+import logo from "../assets/logo1.png";
 
 const Nav = () => {
   return (
    
-    <nav className="flex justify-between items-center font-semibold md:mr-10">
-    <ul className="flex">
+    <nav >
+      <ul className="flex">
+          <a href="/" className="logo flex">
+            <img src={logo} className="logo" alt="little lemon logo"/>
+          </a>
+    
       <li className="list-item">
         <a href="/home">Home</a>
       </li>
