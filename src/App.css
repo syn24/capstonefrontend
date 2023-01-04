@@ -65,6 +65,12 @@ ul {
   padding: 10px;
 }
 
+.bookform {
+  display: grid; 
+  max-width: 200px; 
+  gap: 20px;
+}
+
 nav ul {
   list-style: none;
   text-align: center;
@@ -76,6 +82,18 @@ nav li {
   display: inline-block;
   transition: 0.3s ease-in-out;
 }
+
+@media screen and (max-width: 450px) {
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 
 li a {
   color: white;

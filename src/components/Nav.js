@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/logo1.png";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -11,19 +12,13 @@ const Nav = () => {
           </a>
     
       <li className="list-item">
-        <a href="/home">Home</a>
-      </li>
-      <li className="list-item">
-        <a href="/home">About</a>
+        <Link to="/">Homepage</Link>
       </li>
       <li className="list-item">
         <a href="/home">Menu</a>
       </li>
       <li className="list-item">
-        <a href="/home">Reservations</a>
-      </li>
-      <li className="list-item">
-        <a href="/home">Order Online</a>
+        <Link to="/booking">Reservation</Link>
       </li>
       <li className="list-item">
         <a href="/home">Login</a>
