@@ -10,7 +10,7 @@ const Footer = () => {
     </a>
 
       <ul className="flex">
-        <h4>Doormat Links</h4>
+        <h4>Links</h4>
         <li>
           <a href="/">Home</a>
         </li>
@@ -19,15 +19,6 @@ const Footer = () => {
         </li>
         <li>
           <a href="/">Menu</a>
-        </li>
-        <li>
-          <a href="/">Reservations</a>
-        </li>
-        <li>
-          <a href="/">Order Onlin</a>
-        </li>
-        <li>
-          <a href="/">Login</a>
         </li>
       </ul>
       <ul className="flex">
