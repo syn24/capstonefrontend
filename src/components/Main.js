@@ -2,24 +2,35 @@ import React, { useReducer } from "react";
 
 import BookingPage from "./BookingPage";
 import Test from "./Test";
+import {fetchAPI} from "../fetchAPI";
+
+
+
+function fetchDateJSON(date) {
+  return fetchAPI(date);
+}
 
 export const initializeTimes = () => {
-  return [
-    { label: "17:00", value: "17" },
-    { label: "18:00", value: "18" },
-    { label: "19:00", value: "19" },
-    { label: "20:00", value: "20" },
-    { label: "21:00", value: "21" },
-    { label: "22:00", value: "22" },
-  ];
+  var today = new Date();
+  const result = fetchDateJSON(today);
+  //console.log(result);
+  return result;
+  //console.log(fetchDate(date).then((response) => response.json())
+  //.then((data) => console.log(data)));
+  //const response = await fetchDate(date);
+  //const result = await response.json();
+  //console.log(result);
+
+  //return window["fetchAPI"](date);
 }
 
 export const updateTimes = (state, action) => {
-  console.log(action);
-  console.log(state);
   switch (action.type) {
     case 'date':
-      console.log(action.payload)
+      console.log(action.payload.date)
+      //return fetchDateJSON(action.payload.date);
+      //const response =  fetchDateJSON(action.payload.date);
+      //console.log(result);
       return state;
     default:
       throw new Error();

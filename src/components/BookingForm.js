@@ -7,6 +7,8 @@ const BookingForm = ({times, changeProps}) => {
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("");
 
+  console.log(times);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Booking created!");
@@ -19,8 +21,6 @@ const BookingForm = ({times, changeProps}) => {
     setGuests(1);
     setOccasion("");
   };
-
-  console.log(times);
 
   return (
       
@@ -49,7 +49,7 @@ const BookingForm = ({times, changeProps}) => {
             >
               <option value="Please select..."> -- Select a time -- </option>
               {times.map((time) => (
-                <option value={time.value} key={time.value}>{time.label}</option>
+                <option value={time} key={time}>{time}</option>
               ))}
             </select>
           </div>
