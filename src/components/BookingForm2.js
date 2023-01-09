@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const BookingForm = ({times, changeProps, submitForm}) => {
+const BookingForm = ({times, changeProps}) => {
   const [resDate, setResDate] = useState("");
   const [resTime, setResTime] = useState("Please select...");
   const [guests, setGuests] = useState(1);
@@ -19,7 +19,6 @@ const BookingForm = ({times, changeProps, submitForm}) => {
       guests,
       occasion,
   };
-    submitForm(formData);
   };
 
   const clearForm = () => {
