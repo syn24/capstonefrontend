@@ -86,7 +86,7 @@ const BookingForm = ({times, changeProps, submitForm}) => {
                 <option value="anniversairy">Anniversary</option>
                </select> 
              </div>
-             <input type="submit" value="Make Your reservation" /> 
+             <input type="submit" disabled={!resDate || !resTime || !occasion || !guests || +guests < 1} value="Make Your reservation" /> 
         </fieldset>
       </form>
     </>

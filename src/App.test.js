@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 import BookingForm from './components/BookingForm';
 import React from 'react';
@@ -19,9 +19,24 @@ test('Renders the BookingForm heading', () => {
       return 'hello';
     });
     
-    render(<BookingForm times={[]} changeProps={dispatch} submitForm={submitForm}></BookingForm>);
+    render(<BookingForm times={["17:00"]} changeProps={dispatch} submitForm={submitForm}></BookingForm>);
     const headingElement = screen.getByText(/Make your reservation/i);
     expect(headingElement).toBeInTheDocument();
+
+    const dateInput = screen.getByLabelText(/date/);
+    fireEvent.change(dateInput, { target: { value: '2023-01-01' } });
+
+    const timeInput = screen.getByLabelText(/time/);
+    fireEvent.change(timeInput, { target: { value: '17:00' } });
+
+    const occasion = screen.getByLabelText("Occasion");
+    fireEvent.change(occasion, { target: { value: 'birthday' } });
+
+    const submitButton = screen.getByRole("button");
+    fireEvent.click(submitButton);
+
+    expect(submitForm).toBeCalledTimes(1);
+
 })
 
 test('Run the availableTimes function', () => {
